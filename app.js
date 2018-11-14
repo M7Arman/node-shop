@@ -16,6 +16,7 @@ mongoose
   )
   .then(result => console.log('result :', result))
   .catch(err => console.log('err :', err));
+mongoose.Promise = global.Promise;
 
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({ extended: false }));
